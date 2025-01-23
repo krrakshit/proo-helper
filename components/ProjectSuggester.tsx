@@ -110,11 +110,11 @@ export default function ProjectSuggester() {
         </Select>
       </div>
 
-      <div className="flex space-x-4">
-        <Button onClick={handleSubmit} disabled={!niche || !difficulty || !audience || loading} className="flex-grow">
+      <div className="flex flex-wrap gap-4">
+        <Button onClick={handleSubmit} disabled={!niche || !difficulty || !audience || loading} className="flex-1 min-w-[200px]">
           {loading ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className="h-4 w-4 animate-spin" />
               Generating Ideas...
             </>
           ) : (
@@ -122,7 +122,7 @@ export default function ProjectSuggester() {
           )}
         </Button>
         <Button onClick={handleRemoveFilters} variant="outline" className="flex items-center">
-          <X className="h-4 w-4 mr-2" />
+          <X className="h-4 w-4" />
           Remove Filters
         </Button>
       </div>
